@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show de Drones — Enjambre Modular</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Panel de Control -->
+    <div id="panel">
+
+        <!-- Input de Texto -->
+        <div class="seccion-input">
+            <input type="text" id="txtInput" placeholder="Escribe algo..." maxlength="50" autocomplete="off">
+            <button id="btnMostrar" class="btn-mostrar">Mostrar</button>
+        </div>
+
+        <!-- Navegación -->
+        <div class="seccion-nav">
+            <button id="btnAnterior" class="btn-nav">◀ Anterior</button>
+            <button id="btnSiguiente" class="btn-nav">Siguiente ▶</button>
+        </div>
+
+        <!-- Info -->
+        <div class="seccion-info">
+            <div class="info-estado">
+                Escena: <span id="estado">Esperando...</span>
+            </div>
+            <div id="debug-info">Inicializando...</div>
+
+            <!-- Control de Velocidad -->
+            <div class="control-velocidad" style="margin-top: 10px; display: flex; align-items: center; gap: 10px;">
+                <label for="rangeVelocidad" style="color: #aaa; font-size: 0.9em;">Velocidad:</label>
+                <input type="range" id="rangeVelocidad" min="1" max="10" value="5" style="width: 100px;">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Canvas de Renderizado -->
+    <canvas id="canvas"></canvas>
+
+    <!-- Punto de Entrada Modular -->
+    <script type="module" src="./js/inicio.js"></script>
+
+</body>
+
+</html>
