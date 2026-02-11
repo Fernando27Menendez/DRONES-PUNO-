@@ -1,42 +1,30 @@
-// ============================================================
-// constantes.js — Centro de Control del Sistema de Enjambre
-// Todas las variables ajustables del sistema en un solo lugar.
-// ============================================================
-
-// --- Población ---
 export const TOTAL_DRONES = 4000;
 
-// --- Movimiento (Interpolación Simple) ---
-export const VELOCIDAD_INTERPOLACION = 0.08;  // Más rápido (antes 0.05)
-export const SNAP_DISTANCIA = 1.0;            // Mayor radio de llegada
-export const FRICCION = 0.95;                 // Damping del aire
+export const VELOCIDAD_INTERPOLACION = 0.08;
+export const SNAP_DISTANCIA = 1.0;
+export const FRICCION = 0.95;
 
-// --- Grid / Pixel Art ---
-export const TAMANO_CELDA = 8;                // Más pequeño = Más resolución (Más drones)
-export const RADIO_COLISION = 0;              // Desactivado
-export const RADIO_PROXIMIDAD = 0;            // Desactivado
+export const TAMANO_CELDA = 8;
+export const RADIO_COLISION = 0;
+export const RADIO_PROXIMIDAD = 0;
 
-// --- Quadtree ---
-export const CAPACIDAD_QUADTREE = 4;          // Máx. drones por nodo antes de subdividir
+export const CAPACIDAD_QUADTREE = 4;
 
-// --- Formación Base ---
-export const ZONA_BASE_PORCENTAJE = 0.15;     // La base ocupa el 15% inferior del canvas
-export const ESPACIADO_BASE = 4;              // Más compactos en la base
+export const ZONA_BASE_PORCENTAJE = 0.15;
+export const ESPACIADO_BASE = 4;
 
-// --- Visual ---
 export const COLORES = {
-    dronesActivos: '#00d2ff',                 // Cian brillante
-    dronesInactivos: '#444444',               // Gris oscuro
-    dronesCayendo: '#ff4444',                 // Rojo al caer
-    fondo: '#0a0a0f',                         // Fondo casi negro
+    dronesActivos: '#00d2ff',
+    dronesInactivos: '#444444',
+    dronesCayendo: '#ff4444',
+    fondo: '#0a0a0f',
 };
 
 export const TAMANO = {
-    dronActivo: 3,                            // Radio 3px (Diámetro 6px) para celda de 8px
-    dronInactivo: 1.5,                        // Radio en px cuando está en base
+    dronActivo: 3,
+    dronInactivo: 1.5,
 };
 
-// --- Estados del Dron Individual ---
 export const ESTADO_DRON = {
     EN_BASE: 'EN_BASE',
     SUBIENDO: 'SUBIENDO',
@@ -44,7 +32,6 @@ export const ESTADO_DRON = {
     CAYENDO: 'CAYENDO',
 };
 
-// --- Estados del Orquestador ---
 export const ESTADOS = {
     EN_BASE: 'EN_BASE',
     FORMANDO: 'FORMANDO',
